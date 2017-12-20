@@ -1,0 +1,8 @@
+parity --config ./node1.toml --nat=none
+
+
+parity --config ./node0.toml --nat=none --unlock "0x004ec07d2329997267ec62b4166639513386f32e" --password "./pass.txt" --force-ui
+
+
+curl --data '{"jsonrpc":"2.0","method":"parity_addReservedPeer","params":["enode://e93120f314772eb3a436871a1bc9655ac42c65a190f6d22812a7cb79848aeb9df4d0c2df6aa6eb5d3cfe86c05f5f7c03ce8bddf188ef600799c03ef2b65fab1f@10.1.1.13:30300"],"id":0}' -H "Content-Type: application/json" -X POST localhost:8541
+
